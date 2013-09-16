@@ -1,0 +1,9 @@
+.container .tweets{
+padding: 20px 20px 20px 20px;
+margin: 20px 20px 20px 20px;
+border: 1px solid #C0C0C0;}
+
+.container .tweets .d{
+color: #C0C0C0;
+right: 50px;
+}
