@@ -44,14 +44,14 @@ def sy():
 	url = 'https://api.twitter.com/1.1/search/tweets.json'
 	r = requests.get(url, auth=oauth,params=payload)
 	a=r.json()
-	b=[]
-	for i in range(payload['count']):
-		time=a['statuses'][i]['created_at']
-		st=a['statuses'][i]['text']
-		t=time.encode('utf8')
-		s=st.encode('utf8')
-		tup=(s,t)
-		b.append(tup)
+	#b=[]
+	#for i in range(payload['count']):
+	#	time=a['statuses'][i]['created_at']
+	#	st=a['statuses'][i]['text']
+	#	t=time.encode('utf8')
+	#	s=st.encode('utf8')
+	#	tup=(s,t)
+	#	b.append(tup)
 	#return render_template('syr.html',updates=b)
 	return a
 
