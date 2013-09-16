@@ -45,15 +45,15 @@ def sy():
 	r = requests.get(url, auth=oauth,params=payload)
 	a=r.json()
 	b=[]
-	for i in range(payload['count']):
-		time=a['statuses'][i]['created_at']
-		st=a['statuses'][i]['text']
-		#t=time.encode('utf8')
-		#s=st.encode('utf8')
-		tup=(st,time)
-		b.append(tup)
+	#for i in range(payload['count']):
+	#	time=a['statuses'][i]['created_at']
+	#	st=a['statuses'][i]['text']
+	#	#t=time.encode('utf8')
+	#	#s=st.encode('utf8')
+	#	tup=(st,time)
+	#	b.append(tup)
 	#return render_template('syr.html',updates=b)
-	return b
+	return a
 
 #if __name__ == "__main__":
 #    app.run()
