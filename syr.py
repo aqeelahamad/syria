@@ -43,8 +43,8 @@ def sy():
 	payload = {'q': 'arsenal','count':4}
 	url = 'https://api.twitter.com/1.1/search/tweets.json?q=arsenal'
 	r = requests.get(url, auth=oauth,params=payload)
-	a=r.json()
-	b=[]
+	#a=r.json()
+	#b=[]
 	#for i in range(payload['count']):
 		#time=a['statuses'][i]['created_at']
 		st=a['statuses'][i]['text']
@@ -53,7 +53,7 @@ def sy():
 		#tup=(st,time)
 		#b.append(st)
 	#return render_template('syr.html',updates=b)
-	return a
+	return r.json()
 
 #if __name__ == "__main__":
 #    app.run()
