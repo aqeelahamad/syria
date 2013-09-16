@@ -47,7 +47,7 @@ def sy():
 	#b=[]
 	#for i in range(payload['count']):
 		#time=a['statuses'][i]['created_at']
-		st=a['statuses'][i]['text']
+		#st=a['statuses'][i]['text']
 		#t=time.encode('utf8')
 		#s=st.encode('utf8')
 		#tup=(st,time)
