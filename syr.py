@@ -52,7 +52,8 @@ def sy():
 		s=st.encode('utf8')
 		tup=(s,t)
 		b.append(tup)
-	return render_template('syr.html',updates=b)
+	#return render_template('syr.html',updates=b)
+	return a
 
 if __name__ == "__main__":
     app.run()
