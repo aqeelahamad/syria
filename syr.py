@@ -46,12 +46,12 @@ def sy():
 	a=r.json()
 	b=[]
 	for i in range(payload['count']):
-		time=a['statuses'][i]['created_at']
+		#time=a['statuses'][i]['created_at']
 		st=a['statuses'][i]['text']
 		#t=time.encode('utf8')
 		#s=st.encode('utf8')
-		tup=(st,time)
-		b.append(tup)
+		#tup=(st,time)
+		b.append(st)
 	#return render_template('syr.html',updates=b)
 	return b
 
