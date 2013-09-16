@@ -38,7 +38,7 @@ bodyoauth = OAuth1(client_key, client_secret,
                    
 @app.route('/')			   
 def sy():
-	payload = {'q': 'arsenal','count':5}
+	payload = {'q': 'wenger','count':5}
 	url = 'https://api.twitter.com/1.1/search/tweets.json'
 	r = requests.get(url, auth=oauth,params=payload)
 	a=r.json()
