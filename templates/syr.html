@@ -56,9 +56,13 @@
 
       <h1>updates on syria</h1>
     
-	{{updates}}
- 
-
+	<link href="/static/css/new.css" rel="stylesheet" >	
+      		{% for m,n in updates %}
+      		<div class='tweets'>
+      			 <li>{{ m }}</li>
+      			 <ul>{{ n }}</ul> 
+      		</div>
+     	 	{% endfor %}
 
     </div> <!-- /container -->
 
