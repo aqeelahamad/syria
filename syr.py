@@ -51,7 +51,7 @@ def sy():
 		t=time.encode('utf8')
 		s=st.encode('utf8')
 		tup=(st,time)
-		b.append(st)
+		b.append(tup)
 	return render_template('syr.html',updates=b)
 	#return b
 
