@@ -55,7 +55,7 @@ def sy():
 	return render_template('syr.html',updates=b)
 	#return b
 
-#if __name__ == "__main__":
-#    app.run()
+if __name__ == "__main__":
+    app.run()
 #print sy()
     
