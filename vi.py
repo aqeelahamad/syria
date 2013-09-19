@@ -52,14 +52,14 @@ def vi():
 		s=st.encode('utf8')
 		tup=(st,time)
 		b.append(tup)
-	#return render_template('syr.html',updates=b)
-	return b
+	return render_template('vi.html',updates=b)
+
 
 @app.route('/about')
 def about():
 	return render_template('about.html')
 
-#if __name__ == "__main__":
-#    app.run()
-print vi()
+if __name__ == "__main__":
+    app.run()
+#print vi()
     
