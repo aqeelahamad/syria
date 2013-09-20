@@ -1,1 +1,1 @@
-web: gunicorn syr:app
+web: gunicorn vi:app
