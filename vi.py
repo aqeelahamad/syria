@@ -40,7 +40,7 @@ bodyoauth = OAuth1(client_key, client_secret,
                    
 @app.route('/')			   
 def vi():
-	payload = {'q': 'undervalued stocks','count':15}
+	payload = {'q': 'undervalued stocks','count':100}
 	url = 'https://api.twitter.com/1.1/search/tweets.json'
 	r = requests.get(url, auth=oauth,params=payload)
 	a=r.json()
@@ -58,6 +58,7 @@ def vi():
 @app.route('/about')
 def about():
 	return render_template('about.html')
+	
 
 if __name__ == "__main__":
     app.run()
