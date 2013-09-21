@@ -9,6 +9,12 @@ padding: 20px 20px 20px 500px;
 border: 5px solid #C0C0C0;
 }
 
+.container .about{
+padding: 40px 60px 40px 60px;
+border-top: 2 px solid #C0C0C0;
+border-left:2px solid #C0C0C0;
+}
+
 
 
 
