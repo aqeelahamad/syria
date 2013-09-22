@@ -53,8 +53,8 @@ def vi():
 		s=st.encode('utf8')
 		tup=(st,time)
 		b.append(tup)
-	return render_template('vi.html',updates=b)
-	#return b
+	#return render_template('vi.html',updates=b)
+	return 
 
 
 @app.route('/about')
@@ -62,19 +62,22 @@ def about():
 	return render_template('about.html')
 	
 @app.route('/stocks')
-def stocks(b):
+def stocks():
 	stock_ls=[]
 	reg=r'\$[a-zA-Z]+'
 	for tweets,time in b:
 		stock=re.findall(reg,tweets)
 		if stock :
 			stock_ls.extend(stock)
-	stock_ls=set(stock_ls)
+	stock_ls=list(set(stock_ls))
+	stock_ls=map(str,stock_ls)
 	return render_template('ticker.html',tick=stock_ls)
+	#return stock_ls
 
 	
 
 if __name__ == "__main__":
     app.run()
-
+#vi()
+#print stocks()
     
