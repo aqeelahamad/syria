@@ -38,13 +38,14 @@ bodyoauth = OAuth1(client_key, client_secret,
                    resource_owner_key, resource_owner_secret,
                    signature_type='body')
                    
+payload = {'q': 'undervalued stocks','count':100}
+url = 'https://api.twitter.com/1.1/search/tweets.json'
+r = requests.get(url, auth=oauth,params=payload)
+a=r.json()                   
+b=[]
+
 @app.route('/')			   
 def vi():
-	payload = {'q': 'undervalued stocks','count':100}
-	url = 'https://api.twitter.com/1.1/search/tweets.json'
-	r = requests.get(url, auth=oauth,params=payload)
-	a=r.json()
-	b=[]
 	for i in range(payload['count']):
 		time=a['statuses'][i]['created_at']
 		st=a['statuses'][i]['text']
@@ -53,11 +54,22 @@ def vi():
 		tup=(st,time)
 		b.append(tup)
 	return render_template('vi.html',updates=b)
+	#return b
 
 
 @app.route('/about')
 def about():
 	return render_template('about.html')
+	
+@app.route('/stocks')
+def stocks(b):
+	stock_ls=[]
+	reg=r'$[a-zA-Z]+'
+	for tweets,time in b:
+		stock=re.findall(reg,tweets)
+		if stock:
+			stock_ls.extend(stock)
+	return render_template('ticker.html',tick=stock_ls)
 	
 
 if __name__ == "__main__":
