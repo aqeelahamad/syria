@@ -18,7 +18,5 @@ def sort(ls):
         pivot = ls[0]
         less = [x for x in ls[1:] if x[2] <  pivot[2]]
         greater = [x for x in ls[1:] if x[2] >= pivot[2]]
-        return sort(less) + [pivot] + sort(greater)	
+        return sort(greater) + [pivot] + sort(less)	
 
-print sort([['http://t.co/YSC8RBaMvs', 'Mon Sep 23 20:40:52 +0000 2013', 7.560599470125351e-05], 
- ['http://t.co/72gBHuUZer', 'Mon Sep 23 18:55:55 +0000 2013', 7.560599470125351e-05]])
