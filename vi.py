@@ -85,7 +85,7 @@ def link():
 		links=re.findall(reg2,tweets)	
 		if links:
 			link_ls.extend(links)
-	link_ls=[strlk) for lk in link_ls]
+	link_ls=[str(lk) for lk in link_ls]
 	return render_template('link.html',lk=link_ls)
 	#return link_ls
 	
