@@ -3,6 +3,7 @@ import re
 import os
 import requests
 import jinja2
+import urllib
 from requests_oauthlib import OAuth1
 from flask import render_template
 from flask import Flask
@@ -44,6 +45,8 @@ r = requests.get(url, auth=oauth,params=payload)
 a=r.json()                   
 b=[]
 
+#ef reg_loop(reg
+
 @app.route('/')			   
 def vi():
 	for i in range(payload['count']):
@@ -53,7 +56,8 @@ def vi():
 		s=st.encode('utf8')
 		tup=(st,time)
 		b.append(tup)
-	return render_template('vi.html',updates=b)
+	#return render_template('vi.html',updates=b)
+	return b
 
 
 @app.route('/about')
@@ -72,11 +76,21 @@ def stocks():
 	stock_ls=map(str,stock_ls)
 	return render_template('ticker.html',tick=stock_ls)
 	#return stock_ls
-
+	
+@app.route('/links')
+def link():
+	link_ls=[]
+	reg2=r'http(?:\S)*'
+	for tweets,time in b:
+		links=re.findall(reg2,tweets)	
+		if links:
+			link_ls.extend(links)
+	link_ls=[urllib.quote(lk) for lk in link_ls]
+	return render_template('link.html',lk=link_ls)
 	
 
-if __name__ == "__main__":
-    app.run()
-#vi()
-#print stocks()
+#if __name__ == "__main__":
+#    app.run()
+vi()
+print link()
     
