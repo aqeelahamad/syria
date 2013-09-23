@@ -40,7 +40,7 @@ bodyoauth = OAuth1(client_key, client_secret,
                    resource_owner_key, resource_owner_secret,
                    signature_type='body')
                    
-payload = {'q': 'undervalued stocks','count':10}
+payload = {'q': 'undervalued stocks','count':100}
 url = 'https://api.twitter.com/1.1/search/tweets.json'
 r = requests.get(url, auth=oauth,params=payload)
 a=r.json()                   
@@ -87,7 +87,7 @@ def link():
 								                    a['statuses'][0]['user']['statuses_count'],a['statuses'][i]['created_at']) 
 								                    for i in range(payload['count'])]:
 		links=re.findall(reg2,tweets)	
-		if links:
+		if links and 'app' not in links:
 			link_ls.append(rank(links,followers,friends,favorite,total,time))
 	link_st=sort(link_ls)
 	return render_template('link.html',lk1=link_ls,lk2=link_st)

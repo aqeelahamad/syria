@@ -63,19 +63,19 @@
         </div>
 	
       		<div class='lk1'>
-      			<h3> the latest 20</h3>
+      			<h3> the latest 20 : </h3>
       			<p>the latest links</p>
       				{% for l,t,v in lk1 %}
-      					<a href={{ l }}> <ul>{{ l }}</ul>  </a> was published at {{ t }}
+      					<a href={{ l }}> <li>{{ l }}</li>  </a> was published at {{ t }}
      	 			{% endfor %}
       		</div>
       		
         	<div class="lk2">
-          		<h3>20 highest ranked</h3>
+          		<h3>20 highest ranked :</h3>
           		<p>the most popular links: </p>
  
       				{% for l,t,v in lk2 %}
-      					<a href={{ l }}> <ul>{{ l }}</ul>  </a> was published at {{ t }}
+      					<a href={{ l }}> <li>{{ l }}</li>  </a> was published at {{ t }}
      	 			{% endfor %}
       		</div>
           
