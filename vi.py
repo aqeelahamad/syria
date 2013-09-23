@@ -87,7 +87,7 @@ def link():
 								                    a['statuses'][0]['user']['statuses_count'],a['statuses'][i]['created_at']) 
 								                    for i in range(payload['count'])]:
 		links=re.findall(reg2,tweets)	
-		if links and 'app' not in links:
+		if links and 'App' not in links:
 			link_ls.append(rank(links,followers,friends,favorite,total,time))
 	link_st=sort(link_ls)
 	return render_template('link.html',lk1=link_ls,lk2=link_st)
