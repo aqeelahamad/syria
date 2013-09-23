@@ -56,8 +56,8 @@ def vi():
 		s=st.encode('utf8')
 		tup=(st,time)
 		b.append(tup)
-	#return render_template('vi.html',updates=b)
-	return b
+	return render_template('vi.html',updates=b)
+	#return b
 
 
 @app.route('/about')
@@ -89,8 +89,7 @@ def link():
 	return render_template('link.html',lk=link_ls)
 	
 
-#if __name__ == "__main__":
-#    app.run()
-vi()
-print link()
+if __name__ == "__main__":
+    app.run()
+
     
