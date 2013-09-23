@@ -83,9 +83,9 @@ def link():
 	link_ls=[]
 	reg2=r'http(?:\S)*'
 	for tweets,followers,friends,favorite,total,time in [(a['statuses'][i]['text'],a['statuses'][0]['user']['followers_count'],
-								          		    a['statuses'][0]['user']['friends_count'],a['statuses'][0]['favorite_count'],
-								                    a['statuses'][0]['user']['statuses_count'],a['statuses'][i]['created_at']) 
-								                    for i in range(payload['count'] if u'App' not in a['statuses'][i]['text'] )]:
+								          		          a['statuses'][0]['user']['friends_count'],a['statuses'][0]['favorite_count'],
+								                          a['statuses'][0]['user']['statuses_count'],a['statuses'][i]['created_at']) 
+								                          for i in range(payload['count']) if u'App' not in a['statuses'][i]['text']]:
 		links=re.findall(reg2,tweets)	
 		if links and 'App' not in links:
 			link_ls.append(rank(links,followers,friends,favorite,total,time))
