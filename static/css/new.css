@@ -14,6 +14,16 @@ border-top: 2 px solid #C0C0C0;
 border-left:2px solid #C0C0C0;
 }
 
+.container .lk1{
+float: left;
+padding: 15px 15px 15px 15px;
+margin: 15px 15px 15px 15px;
+border: 1px solid #C0C0C0;}
 
+.container .lk2{
+float: right;
+padding: 15px 15px 15px 15px;
+margin: 15px 15px 15px 15px;
+border: 1px solid #C0C0C0;}
 
 

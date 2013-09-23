@@ -56,12 +56,25 @@
 
       <h1>recommended links</h1>
     
-	<link href="/static/css/new.css" rel="stylesheet" >	
-      		<div class='lk'>
-      		{% for l in lk %}
-      			<a href={{ l }}> <ul>{{ l }}</ul>  </a>
-     	 	{% endfor %}
+	<link href="/static/css/new.css" rel="stylesheet" >
+      		<div class='lk1'>
+      			<h3> the latest 20</h3>
+      			<p>the latest links</p>
+      				{% for l in lk %}
+      					<a href={{ l }}> <ul>{{ l }}</ul>  </a>
+     	 			{% endfor %}
       		</div>
+      		
+        	<div class="lk2">
+          		<h3>20 highest ranked</h3>
+          		<p>the most popular links: </p>
+ 
+      				{% for l in lk %}
+      					<a href={{ l }}> <ul>{{ l }}</ul>  </a>
+     	 			{% endfor %}
+      		</div>
+          
+
 
     </div> <!-- /container -->
 
