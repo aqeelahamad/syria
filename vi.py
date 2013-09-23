@@ -7,6 +7,7 @@ import urllib
 from requests_oauthlib import OAuth1
 from flask import render_template
 from flask import Flask
+from r_s import rank, sort
 
 tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 
@@ -39,7 +40,7 @@ bodyoauth = OAuth1(client_key, client_secret,
                    resource_owner_key, resource_owner_secret,
                    signature_type='body')
                    
-payload = {'q': 'undervalued stocks','count':100}
+payload = {'q': 'undervalued stocks','count':10}
 url = 'https://api.twitter.com/1.1/search/tweets.json'
 r = requests.get(url, auth=oauth,params=payload)
 a=r.json()                   
@@ -81,17 +82,21 @@ def stocks():
 def link():
 	link_ls=[]
 	reg2=r'http(?:\S)*'
-	for tweets,time in b:
+	for tweets,followers,friends,favorite,total,time in [(a['statuses'][i]['text'],a['statuses'][0]['user']['followers_count'],
+								          		    a['statuses'][0]['user']['friends_count'],a['statuses'][0]['favorite_count'],
+								                    a['statuses'][0]['user']['statuses_count'],a['statuses'][i]['created_at']) 
+								                    for i in range(payload['count'])]:
 		links=re.findall(reg2,tweets)	
 		if links:
-			link_ls.extend(links)
-	link_ls=[str(lk) for lk in link_ls]
-	return render_template('link.html',lk=link_ls)
+			link_ls.append(rank(links,followers,friends,favorite,total,time))
+	link_st=sort(link_ls)
+	return render_template('link.html',lk1=link_ls,lk2=link_st)
 	#return link_ls
 	
 
 if __name__ == "__main__":
     app.run()
+#print a['statuses'][0]['user']['statuses_count']
 #vi()
 #print link()
     
