@@ -59,7 +59,7 @@
 	<link href="/static/css/new.css" rel="stylesheet" >	
       		<div class='lk'>
       		{% for l in lk %}
-      			 <li>{{ l }}</li>
+      			<a href={{ l }}> <ul>{{ l }}</ul>  </a>
      	 	{% endfor %}
       		</div>
 
