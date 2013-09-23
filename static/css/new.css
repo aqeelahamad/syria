@@ -9,9 +9,15 @@ padding: 20px 20px 20px 500px;
 }
 
 .container .abt{
-padding: 40px 60px 40px 60px;
-border-top: 2 px solid #C0C0C0;
-border-left:2px solid #C0C0C0;
+margin-top: 70px;
+padding-left: 20px;
+padding-top: 5px;
+padding-bottom: 15px;
+float: center;
+background-color:#FAF0E6;
+width: 70%;
+margin-right: 20%;
+margin-left: 10%;
 }
 
 .container .lk1{
@@ -28,7 +34,7 @@ padding: 15px 15px 15px 15px;
 margin: 15px 15px 15px 15px;
 border: 1px solid #C0C0C0;}
 
-.container .title-back{
+.container .title{
 padding-left: 20px;
 padding-top: 5px;
 padding-bottom: 15px;
