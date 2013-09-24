@@ -7,7 +7,7 @@ import urllib
 from requests_oauthlib import OAuth1
 from flask import render_template
 from flask import Flask
-from r_s import rank, sort
+from r_s import rank, check, sort
 
 tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 
@@ -89,8 +89,8 @@ def link():
 		links=re.findall(reg2,tweets)	
 		if links and 'App' not in links:
 			link_ls.append(rank(links,followers,friends,favorite,total,time))
-	link_ls=list(set(sort(link_ls)))
-	link_st=list(set(sort(link_ls)))
+	link_ls=check(link_ls)
+	link_st=sort(link_ls)
 	return render_template('link.html',lk1=link_ls,lk2=link_st)
 	#return link_ls
 	
