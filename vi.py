@@ -89,7 +89,7 @@ def link():
 		links=re.findall(reg2,tweets)	
 		if links and 'App' not in links:
 			link_ls.append(rank(links,followers,friends,favorite,total,time))
-	#link_ls=check(link_ls[:20])
+	link_ls=check(link_ls)
 	link_st=sort(link_ls)
 	return render_template('link.html',lk1=link_ls,lk2=link_st)
 	#return link_ls
