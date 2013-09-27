@@ -25,14 +25,16 @@ width:40%;
 float: left;
 padding: 15px 15px 15px 15px;
 margin: 15px 15px 15px 15px;
-border: 1px solid #C0C0C0;}
+border: 1px solid #C0C0C0;
+overflow-y: scroll;}
 
 .container .lk2{
 width:40%;
 float: right;
 padding: 15px 15px 15px 15px;
 margin: 15px 15px 15px 15px;
-border: 1px solid #C0C0C0;}
+border: 1px solid #C0C0C0;
+overflow-y: scroll;}
 
 .container .title{
 padding-left: 20px;
@@ -44,3 +46,11 @@ width: 70%;
 margin-right: 20%;
 margin-left: 10%;
 }
+
+.container .tck{
+padding: 20px 20px 30px 30px;
+height: 500px;
+}
+
+.container .quote{
+padding: 20px 20px 30px 30px;}
