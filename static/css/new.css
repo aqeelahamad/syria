@@ -56,4 +56,14 @@ border-left: 1px solid #C0C0C0;
 }
 
 .container .tck .quote{
-padding: 10px 10px 10px 10px;}
+padding: 20px 20px 20px 20px;
+font-size: 14px}
+
+input[type=submit] {
+  font-size: 8px;
+  background-color:#FFFFFF;
+  color:#0066CC;
+  width: 50px;
+  height: 15px;
+  border-color:#0066CC;
+}
