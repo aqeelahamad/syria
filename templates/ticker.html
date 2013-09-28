@@ -27,7 +27,26 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
-	
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script>
+  $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  });
+  </script>
   </head>
 
   <body>
@@ -61,10 +80,15 @@
       		<div class='tck'>
       		 <div class='quote'>
       		{% for t in tick %}
-      			 <li>{{ t }}</li>
+      			 <li>{{ t }}  <button id="opener">Open Dialog</button> </li>
+      			 <div id="dialog" title="Basic dialog">
+ 						 <p>{{ t }}</p>
+                 </div>
      	 	{% endfor %}
      	 	 </div>
       		</div>
+      		
+      		
 
     </div> <!-- /container -->
 
