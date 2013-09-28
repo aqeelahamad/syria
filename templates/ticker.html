@@ -29,6 +29,7 @@
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script>
   $(function() {
     $( "#dialog" ).dialog({
@@ -81,17 +82,15 @@
       		<div class='tck'>
       		 <div class='quote'>
       		{% for t in tick %}
-      			 <li>{{ t }}  </li>
-      			 
+      			 <li>{{ t }}  <button id="opener">get info</button></li>
+      			 <div id="dialog" title="Basic dialog">	
+      	 				<p> {{ t }} </p>
+      			</div>
      	 	{% endfor %}
      	 	 </div>
       		</div>
 
     </div> <!-- /container -->
-    <button id="opener">get info</button>
-      	<div id="dialog" title="Basic dialog">	
-      	 <p> it works </p>
-      	 </div>
 
     <!-- Le javascript
     ================================================== -->
