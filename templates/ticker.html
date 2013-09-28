@@ -30,7 +30,7 @@
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script>
   $(function() {
-    $( ".container .tck .quote #dialog" ).dialog({
+    $( " #dialog" ).dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -42,8 +42,8 @@
       }
     });
  
-    $( ".container .tck .quote #opener" ).click(function() {
-      $( ".container .tck .quote #dialog" ).dialog( "open" );
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
     });
   });
   </script>
@@ -81,14 +81,15 @@
       		 <div class='quote'>
       		{% for t in tick %}
       			 <li>{{ t }}  <button id="opener">get info</button> </li>
-      			 <div id="dialog" title="Basic dialog">
- 						 <p>{{ t }}</p>
-                 </div>
+      			 
      	 	{% endfor %}
      	 	 </div>
       		</div>
       		
-      		
+      	<button id="opener">get info</button>
+      	<div id="dialog" title="Basic dialog">	
+      	 <p> it works </p>
+      	 </div>
 
     </div> <!-- /container -->
 
