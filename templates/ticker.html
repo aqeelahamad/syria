@@ -30,7 +30,7 @@
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script>
   $(function() {
-    $( "#dialog" ).dialog({
+    $( ".container .tck .quote #dialog" ).dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -42,8 +42,8 @@
       }
     });
  
-    $( "#opener" ).click(function() {
-      $( "#dialog" ).dialog( "open" );
+    $( ".container .tck .quote #opener" ).click(function() {
+      $( ".container .tck .quote #dialog" ).dialog( "open" );
     });
   });
   </script>
