@@ -82,12 +82,14 @@
       		<div class='tck'>
       		 <div class='quote'>
       		{% for t in tick %}
-      			 <li>{{ t }}  <button id="opener">get info</button> </li>
+      			 <li>{{ t }}  <button id="opener" onclick="my()">get info</button> </li>
       			  <div id="dialog" title="Basic dialog">
-      			  <script type='text/javascript'>	
+      			  
+      			  		<script type='text/javascript'>	
+      			  		function my(){
       	 				console.log('hello')
-							
-      	 		  </script>
+						}	
+      	 		  		</script>
       			</div>
      	 	{% endfor %}
      	 	 </div>
