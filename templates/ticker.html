@@ -84,10 +84,10 @@
       		{% for t in tick %}
       			 <li>{{ t }}  <button id="opener" onclick="my()">get info</button> </li>
       			  <div id="dialog" title="Basic dialog">
-      			  
-      			  		<script type='text/javascript'>	
+      			  		{{ t }}
+      			  		<script >	
       			  		function my(){
-      	 				console.log('hello')
+      	 				alert('hello')
 						}	
       	 		  		</script>
       			</div>
