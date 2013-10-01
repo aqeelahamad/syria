@@ -73,11 +73,11 @@ def stocks():
 	for tweets,time in b:
 		stock=re.findall(reg,tweets)
 		if stock :
-			stock=json.dumps(stock[0][1:])
+			stock=stock[0][1:]
 			stock_ls.extend([stock])
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(str,stock_ls)
-	return render_template('ticker.html',tick=stock_ls)
+	return render_template('ticker.html',tick=json.dumps(stock_ls))
 	#return stock_ls
 	
 @app.route('/links')
