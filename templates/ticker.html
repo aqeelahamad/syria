@@ -87,9 +87,9 @@
       			  <div id="dialog" title="Basic dialog">
       			  		{{ t }}	
       			  <script >
-      			  var b= $('#dialog').html();
-      			  function c(){ 
-     console.log(b+'aaa');
+      			  var $a=$('#dialog').html()
+      	 				function c(){ 
+     document.getElementById("dialog").innerHTML = $a;
              };
             		
       	 		  		</script>
