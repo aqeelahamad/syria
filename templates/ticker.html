@@ -83,14 +83,14 @@
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li>{{ t }}  <button onclick="c({{ t }});" id="opener" >get info</button> </li>
+      			 <li>{{ t }}  <button onclick="c();" id="opener" >get info</button> </li>
       			  <div id="dialog" title="Basic dialog">
       			  		
       			  <script >
-      			  function c(a){ 
-     document.getElementById("dialog").innerHTML = a;
+      			  function c(){ 
+     document.getElementById("dialog").innerHTML = {{ t }};
              };
-             		
+            		
       	 		  		</script>
       			</div>
      	 	{% endfor %}
