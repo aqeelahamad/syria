@@ -85,12 +85,12 @@
       		
       			 <li>{{ t }}  <button onclick="c();" id="opener" >get info</button> </li>
       			  <div id="dialog" title="Basic dialog">
-      			  		
+      			  		{{ t }}
       			  <script >
       			  function c(a){ 
      document.getElementById("dialog").innerHTML = a;
              };
-             var b = document.getElementByClass("quote")	  
+             var b = {{ t|safe }}  
 				c(b);			
       	 		  		</script>
       			</div>
