@@ -72,7 +72,7 @@ def stocks():
 	for tweets,time in b:
 		stock=re.findall(reg,tweets)
 		if stock :
-			stock_ls.extend(stock)
+			stock_ls.extend(stock[1:])
 	stock_ls=list(set(stock_ls))
 	stock_ls=map(str,stock_ls)
 	return render_template('ticker.html',tick=stock_ls)
