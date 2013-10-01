@@ -87,12 +87,11 @@
       			  <div id="dialog" title="Basic dialog">
       			  		
       			  <script >
-      			  function c(b){
-      			  var b={{ t }};	
-     document.getElementById("dialog").innerHTML = b;
+      			  function c(a){ 
+     document.getElementById("dialog").innerHTML = a;
              };
-      			  
-							
+      			var b={{ t }};	  
+				c(b)			
       	 		  		</script>
       			</div>
      	 	{% endfor %}
