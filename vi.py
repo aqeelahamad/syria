@@ -74,7 +74,7 @@ def stocks():
 		stock=re.findall(reg,tweets)
 		if stock :
 			stock=stock[0][1:]
-			stock_ls.extend([json.dumps(stock)])
+			stock_ls.extend([str(stock)])
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(str,stock_ls)
 	return render_template('ticker.html',tick=stock_ls)
