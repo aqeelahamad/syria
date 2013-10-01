@@ -82,13 +82,28 @@
       		<div class='tck'>
       		 <div class='quote'>
       		{% for t in tick %}
-      			 <li>{{ t }}  <button onclick="my()" id="opener" >get info</button> </li>
+      			 <li>{{ t }}  <button onclick="c();" id="opener" >get info</button> </li>
       			  <div id="dialog" title="Basic dialog">
       			  		{{ t }}
-      			  		<script >	
-      			  		function my(){
-      	 				var request = require('request');
-var cheerio = require('cheerio');
+      			  <script >
+      			  var request = require('request');
+                  var cheerio = require('cheerio');
+                  
+                  request({
+  						uri: "http://finance.yahoo.com/q?s=AAPL",
+							}, function(error, response, body) {
+							var $ = cheerio.load(body);
+  
+  							$('.rtq_table').each(function(){
+  							var data = $(this);
+  							var text = data.html();});
+  		
+                          });
+                  
+      			  	function c(){
+     document.getElementById("dialog").innerHTML = text;
+             }
+      	 				
 
 request({
   uri: "http://finance.yahoo.com/q?s=AAPL",
@@ -97,13 +112,10 @@ request({
   
   $('.rtq_table').each(function(){
   	var data = $(this);
-  	var text = data.html();
-  
-  console.log(text);
-  });
+  	var text = data.html();});
   		
 });
-						}	
+							
       	 		  		</script>
       			</div>
      	 	{% endfor %}
