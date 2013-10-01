@@ -8,6 +8,7 @@ from requests_oauthlib import OAuth1
 from flask import render_template
 from flask import Flask
 from r_s import rank, check, sort
+import json
 
 tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 
@@ -72,8 +73,8 @@ def stocks():
 	for tweets,time in b:
 		stock=re.findall(reg,tweets)
 		if stock :
-			stock=stock[0][1:]
-			stock_ls.extend([str(stock)])
+			stock=json.dumps(stock[0][1:])
+			stock_ls.extend([stock])
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(str,stock_ls)
 	return render_template('ticker.html',tick=stock_ls)
