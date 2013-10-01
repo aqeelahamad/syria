@@ -101,20 +101,10 @@
                           });
                   
       			  	function c(){
-     document.getElementById("dialog").innerHTML = text;
+     document.getElementById("dialog").innerHTML = 'sex';
              }
       	 				
 
-request({
-  uri: "http://finance.yahoo.com/q?s=AAPL",
-}, function(error, response, body) {
-	var $ = cheerio.load(body);
-  
-  $('.rtq_table').each(function(){
-  	var data = $(this);
-  	var text = data.html();});
-  		
-});
 							
       	 		  		</script>
       			</div>
