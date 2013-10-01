@@ -86,11 +86,15 @@
       			 <li>{{ t }}  <button onclick="c();" id="opener" >get info</button> </li>
       			  <div id="dialog" title="Basic dialog">
       			  		{{ t }}	
+      			  		</div>
       			  <script >
-      			  
+      			  var $a=$('#dialog').html()
+      	 				function c(){ 
+     document.getElementById("dialog").innerHTML = $a;
+             };
             		
       	 		  		</script>
-      			</div>
+      			
      	 	{% endfor %}
      	 	 </div>
       		</div>
