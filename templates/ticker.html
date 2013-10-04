@@ -31,8 +31,8 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script>
-  $(function() {
-    $( ".container .tck .quote .dialog" ).dialog({
+  $(function my(a) {
+    $( ".container .tck .quote ."+a ).dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -44,7 +44,7 @@
       }
     });
  
-    $( ".container .tck .quote .{{ t }}" ).click(function() {
+    $( ".container .tck .quote ."+a ).click(function() {
       $( ".dialog" ).dialog( "open" );
     });
   });
