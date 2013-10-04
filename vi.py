@@ -69,14 +69,16 @@ def about():
 @app.route('/stocks')
 def stocks():
 	stock_ls=[]
-	reg=r'\$[a-zA-Z]+(?:\S)*'
+	reg=r'\$[a-zA-Z]+(?:\.(?:[a-zA-Z])+)?'
 	for tweets,time in b:
 		stock=re.findall(reg,tweets)
 		if stock :
-			stock=stock[0][1:]
-			stock_ls.extend([str(stock)])
+			#print stock
+			#stock=map(stock[0][1:]
+			#print stock
+			stock_ls.extend([str(s[1:]) for s in stock ])
 	stock_ls=list(set(stock_ls))
-	#stock_ls=map(str,stock_ls)
+	#stock_ls=map(,stock_ls)
 	return render_template('ticker.html',tick=stock_ls)
 	#return stock_ls
 	
