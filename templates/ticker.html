@@ -32,7 +32,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script>
   $(function() {
-    $( ".container .tck .quote #dialog" ).dialog({
+    $( ".container .tck .quote .dialog" ).dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -44,8 +44,8 @@
       }
     });
  
-    $( ".container .tck .quote #opener" ).click(function() {
-      $( "#dialog" ).dialog( "open" );
+    $( ".container .tck .quote .opener" ).click(function() {
+      $( ".dialog" ).dialog( "open" );
     });
   });
   </script>
@@ -83,9 +83,9 @@
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t }}  <button  id="opener" >get info</button> </li>
-      			  <div id="dialog" title="Basic dialog">
-      			  		<p>{{ t }}	</p>
+      			 <li> {{ t }} <button  class="opener" >get info</button> </li>
+      			  <div class="dialog" title="Basic dialog">
+      			  		<p>{{ t }}</p>
       			  </div>
       			  
      	 	{% endfor %}
