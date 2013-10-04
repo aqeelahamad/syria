@@ -69,7 +69,7 @@ def about():
 @app.route('/stocks')
 def stocks():
 	stock_ls=[]
-	reg=r'\$[a-zA-Z]+'
+	reg=r'\$[a-zA-Z]+(?:\S)*'
 	for tweets,time in b:
 		stock=re.findall(reg,tweets)
 		if stock :
