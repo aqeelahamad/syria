@@ -30,25 +30,7 @@
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<script>
-  $(function() {
-    $( ".container .tck .quote .dialog" ).dialog({
-      autoOpen: false,
-      show: {
-        effect: "blind",
-        duration: 1000
-      },
-      hide: {
-        effect: "explode",
-        duration: 1000
-      }
-    });
- 
-    $( ".container .tck .quote .opener" ).click(function() {
-      $( ".dialog" ).dialog( "open" );
-    });
-  });
-  </script>
+	
   </head>
 
   <body>
@@ -86,6 +68,25 @@
       			 <li> {{ t }} <button  class="opener" >get info</button> </li>
       			  <div class="dialog" title="Basic dialog">
       			  		<p>{{ t }}</p>
+      			  		<script>
+  $(function() {
+    $( ".container .tck .quote .dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( ".container .tck .quote .opener" ).click(function() {
+      $( ".dialog" ).dialog( "open" );
+    });
+  });
+  </script>
       			  </div>
       			  
      	 	{% endfor %}
