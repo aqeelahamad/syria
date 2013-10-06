@@ -31,7 +31,8 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script>
-  $(function my(a) {
+function my(a){
+  $(document).ready(function() {
     $( ".container .tck .quote ."+a ).dialog({
       autoOpen: false,
       show: {
@@ -48,6 +49,7 @@
       $( ".dialog" ).dialog( "open" );
     });
   });
+}
   </script>
   </head>
 
@@ -83,7 +85,7 @@
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t }} <button  class={{ t }} >get info</button> </li>
+      			 <li> {{ t }} <button  onClick="my("+ {{ t }} +")" class={{ t }} >get info</button> </li>
       			  <div class="dialog" title="Basic dialog">
       			  		<p>cjhcvhjcvhjcv</p>
       			  		
