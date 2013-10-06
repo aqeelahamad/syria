@@ -30,27 +30,7 @@
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<script>
-function my(a){
-  $(document).ready(function() {
-    $( ".container .tck .quote ."+a ).dialog({
-      autoOpen: false,
-      show: {
-        effect: "blind",
-        duration: 1000
-      },
-      hide: {
-        effect: "explode",
-        duration: 1000
-      }
-    });
- 
-    $( ".container .tck .quote ."+a ).click(function() {
-      $( ".dialog" ).dialog( "open" );
-    });
-  });
-}
-  </script>
+	
   </head>
 
   <body>
@@ -85,11 +65,20 @@ function my(a){
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t }} <button  onClick='my({{ t }})' class={{ t }} >get info</button> </li>
-      			  <div class="dialog" title="Basic dialog">
-      			  		<p>cjhcvhjcvhjcv</p>
-      			  		
-      			  </div>
+      			 <li> {{ t }} 
+      			  <script>
+      			  var foo = function(){
+  var button = document.createElement('button');
+  button.innerHTML = 'click me';
+  //button.onclick = function(){
+  //  alert('here be dragons');return false;
+  };
+  // where do we want to have the button to appear?
+  // you can append it to another element just by doing something like
+  // document.getElementById('foobutton').appendChild(button);
+  document.body.appendChild(".container .tck .quote");
+};
+      			  
       			  
      	 	{% endfor %}
      	 	 </div>
