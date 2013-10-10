@@ -31,8 +31,8 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script>
-      		function my(a){
-      		    var c=a
+      		function my(){
+      		    var c='a'
   var button = document.createElement('button');
   button.className = c;
   button.innerHTML = 'click me';
@@ -96,7 +96,7 @@
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t }} <script>my({{ t }})</script> </li>
+      			 <li> {{ t }} <script>my()</script> </li>
       			  <div class="dialog" title="Basic dialog">
       			  		<p>cjhcvhjcvhjcv</p>
       			  		
