@@ -65,7 +65,7 @@
       		<div class='lk1'>
       			<h3> the latest 20 : </h3>
       			<p>the latest links</p>
-      				{% for l,t,v in lk1 %}
+      				{% for l,t,v in lko %}
       					<a href={{ l }}> <li>{{ l }}</li>  </a> was published at {{ t }}
      	 			{% endfor %}
       		</div>
@@ -74,7 +74,7 @@
           		<h3>20 highest ranked :</h3>
           		<p>the most popular links: </p>
  
-      				{% for l,t,v in lk2 %}
+      				{% for l,t,v in lkt %}
       					<a href={{ l }}> <li>{{ l }}</li>  </a> was published at {{ t }}
      	 			{% endfor %}
       		</div>
