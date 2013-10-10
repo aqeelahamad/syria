@@ -94,7 +94,7 @@
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t }} <script>my({{ t }})</script> </li>
+      			 <li> {{ t }} <script>my({{ t|json_encode() }})</script> </li>
       			  
      	 	{% endfor %}
      	 	 </div>
