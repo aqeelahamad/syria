@@ -103,5 +103,5 @@ if __name__ == "__main__":
     app.run()
 #print a['statuses'][0]['user']['statuses_count']
 #vi()
-#print stocks()
+#print link()
     
