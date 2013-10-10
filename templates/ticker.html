@@ -32,7 +32,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script>
       		function my(a){
-      		    var c=a
+      		    var c='a'
   var button = document.createElement('button');
   button.className = c;
   button.innerHTML = 'click me';
@@ -49,7 +49,7 @@
       }
     });
  
-    $( "."+c ).click(function() {
+    $( c ).click(function() {
       $( ".container .tck .quote .dialog" ).dialog( "open" );
     });
   };
