@@ -37,7 +37,6 @@
   button.className = c;
   button.innerHTML = 'click me';
   button.onclick = function(){
-    $(document).ready(function() {
     $(".container .tck .quote .dialog").dialog({
       autoOpen: false,
       show: {
@@ -53,7 +52,6 @@
     $( "."+c ).click(function() {
       $( ".container .tck .quote .dialog" ).dialog( "open" );
     });
-  });
   };
   // where do we want to have the button to appear?
   // you can append it to another element just by doing something like
