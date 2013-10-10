@@ -62,11 +62,12 @@ def vi():
 	#return b
 
 
-#@app.route('/about')
+@app.route('/about')
 def about():
 	return render_template('about.html')
-	
-#def stocks():
+
+@app.route('/stocks')	
+def stocks():
 	stock_ls=[]
 	reg=r'\$[a-zA-Z]+(?:\.(?:[a-zA-Z])+)?'
 	for tweets,time in b:
@@ -81,7 +82,7 @@ def about():
 	return render_template('ticker.html',tick=stock_ls)
 	#return stock_ls
 	
-#@app.route('/links')
+@app.route('/links')
 def link():
 	link_ls=[]
 	reg2=r'http(?:\S)*'
