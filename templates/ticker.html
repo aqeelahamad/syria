@@ -94,7 +94,7 @@
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t }} <script>my({{ t|safe }})</script> </li>
+      			 <li> {{ t|slice 1,-1,1 }} <script>my({{ t|safe }})</script> </li>
       			  
      	 	{% endfor %}
      	 	 </div>
