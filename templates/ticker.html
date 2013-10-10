@@ -34,10 +34,10 @@
       		function my(a){
       		    var c='a'
   var button = document.createElement('button');
-  button.className = c;
+  button.id = c;
   button.innerHTML = 'click me';
   button.onclick = function(){
-    $(".container .tck .quote .dialog").dialog({
+    $(".dialog").dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -49,8 +49,8 @@
       }
     });
  
-    $( c ).click(function() {
-      $( ".container .tck .quote .dialog" ).dialog( "open" );
+    $('#a').click(function() {
+      $( ".dialog" ).dialog( "open" );
     });
   };
   // where do we want to have the button to appear?
