@@ -95,7 +95,7 @@ def link():
 			link_ls.append(rank(links,followers,friends,favorite,total,time))
 	link_ls=check(link_ls)
 	link_st=sort(link_ls)
-	return render_template('link.html',lk1=link_ls[:20],lk2=link_st[:20])
+	return render_template('link.html',lk1=link_ls[:20])#,lk2=link_st[:20])
 	#return link_ls
 	
 
