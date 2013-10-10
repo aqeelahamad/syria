@@ -76,7 +76,7 @@ def stocks():
 			#print stock
 			#stock=map(stock[0][1:]
 			#print stock
-			stock_ls.extend([json.dumps(s[1:]) for s in stock ])
+			stock_ls.extend([str(s[1:]) for s in stock ])
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(,stock_ls)
 	return render_template('ticker.html',tick=stock_ls)
