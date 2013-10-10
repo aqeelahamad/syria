@@ -62,12 +62,11 @@ def vi():
 	#return b
 
 
-@app.route('/about')
+#@app.route('/about')
 def about():
 	return render_template('about.html')
 	
-@app.route('/stocks')
-def stocks():
+#def stocks():
 	stock_ls=[]
 	reg=r'\$[a-zA-Z]+(?:\.(?:[a-zA-Z])+)?'
 	for tweets,time in b:
@@ -82,15 +81,15 @@ def stocks():
 	return render_template('ticker.html',tick=stock_ls)
 	#return stock_ls
 	
-@app.route('/links')
+#@app.route('/links')
 def link():
 	link_ls=[]
 	reg2=r'http(?:\S)*'
-	for tweets,followers,friends,favorite,total,time in [(a['statuses'][i]['text'],a['statuses'][0]['user']['followers_count'],
-								          		          a['statuses'][0]['user']['friends_count'],a['statuses'][0]['favorite_count'],
-								                          a['statuses'][0]['user']['statuses_count'],a['statuses'][i]['created_at']) 
+	for tweets,followers,friends,favorite,total,time in [(a['statuses'][i]['text'],a['statuses'][i]['user']['followers_count'],
+								          		          a['statuses'][i]['user']['friends_count'],a['statuses'][i]['favorite_count'],
+								                          a['statuses'][i]['user']['statuses_count'],a['statuses'][i]['created_at']) 
 								                          for i in range(payload['count']) if u'App' not in a['statuses'][i]['text']]:
-		links=re.findall(reg2,tweets)	
+		links=re.findall(reg2,tweets)
 		if links and 'App' not in links:
 			link_ls.append(rank(links,followers,friends,favorite,total,time))
 	link_ls=check(link_ls)

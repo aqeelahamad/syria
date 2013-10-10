@@ -12,7 +12,8 @@ def rank(links,followers,friends,favorite,total,time):
 			favorite=1
 	sig=float(followers)/float(friends)*float(favorite)/float(total)
 	links=links[0].encode('utf8')
-	return [links,time.encode('utf8'),sig]
+	t=time.encode('utf8')
+	return [links,t,sig]
 	
 def sort(ls):
     if not ls:
