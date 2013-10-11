@@ -48,7 +48,18 @@
         duration: 1000
       }
     });
-    
+ 
+    $('#'+a).click(function() {
+      $( ".dialog" ).dialog( "open" );
+    });
+  };
+  // where do we want to have the button to appear?
+  // you can append it to another element just by doing something like
+  $(button).appendTo('.quote')
+  //document.getElementsByClassName('quote').appendChild(button);
+  //document.body.appendChild(button);
+};
+
 var request = require('request');
 var cheerio = require('cheerio');
 
@@ -64,17 +75,6 @@ request({
   });
   		
 });
- 
-    $('#'+a).click(function() {
-      $( ".dialog" ).dialog( "open" );
-    });
-  };
-  // where do we want to have the button to appear?
-  // you can append it to another element just by doing something like
-  $(button).appendTo('.quote')
-  //document.getElementsByClassName('quote').appendChild(button);
-  //document.body.appendChild(button);
-};
 </script>
   </head>
 
