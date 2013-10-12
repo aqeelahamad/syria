@@ -10,7 +10,7 @@ request({
   	var data = $(this);
   	var text = data.html();
   
-  console.log(text);
+  return text;
   });
   		
 });
