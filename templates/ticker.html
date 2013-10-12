@@ -37,7 +37,7 @@
   button.id = c;
   button.innerHTML = 'click me';
   $(function(){
-    $(".dialog").dialog({
+    $("#dialog").dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -54,7 +54,8 @@
       //scrap();
       //var s='<p>'+c+'</p>'
       //$('.dialog').html(s);
-      $( ".dialog" ).dialog( "open" );
+      document.getElementById("dialog").innerHTML=scrap();
+      $( "#dialog" ).dialog( "open" );
                    });
   });
   
@@ -81,7 +82,7 @@ request({
   $('.rtq_table').each(function(){
   	var data = $(this);
   	var text = data.html();
-  	$('.dialog').html(text)
+  	$('#dialog').html(text)
                  });
   		
       });
@@ -129,7 +130,7 @@ request({
       		</div>
 
     </div> <!-- /container -->
-    <div class="dialog" title="Basic dialog">
+    <div id="dialog" title="Basic dialog">
       			  		
       			  </div>
 
