@@ -51,8 +51,8 @@
     
     $('#'+a).click(function() {
       //$('<p>'+c+'</p>').appendTo('.dialog');
-      var s=scrap();
-      $('.dialog').html(s);
+      //var s=scrap();
+      $('.dialog').html('<p>'+c+'</p>');
       $( ".dialog" ).dialog( "open" );
                    });
   });
@@ -81,10 +81,10 @@ request({
   	var data = $(this);
   	var text = data.html();
   
-  });
+                       });
   		
-});
-}
+      });
+                 };
 
 </script>
   </head>
