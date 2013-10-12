@@ -53,7 +53,7 @@
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
       var s=scrap();
       //var s='<p>'+c+'</p>'
-      $('.dialog').html(s);
+      //$('.dialog').html(s);
       $( ".dialog" ).dialog( "open" );
                    });
   });
@@ -80,9 +80,9 @@ request({
   
   $('.rtq_table').each(function(){
   	var data = $(this);
-  	//var text = data.html();
-  	
-   console.log(data)                  });
+  	var text = data.html();
+  	$('.dialog').html(text)
+                 });
   		
       });
                  };

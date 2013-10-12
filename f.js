@@ -1,3 +1,5 @@
+
+function my(){
 var request = require('request');
 var cheerio = require('cheerio');
 
@@ -6,17 +8,19 @@ request({
 }, function(error, response, body) {
 	var $ = cheerio.load(body);
   
-  $('.rtq_table').each(function(){
+ $('.rtq_table').each(function(){
   	var data = $(this);
   	var text = data.html();
-  
-  return text;
-  });
-  		
-});
+  	return text
 
+                                  });
+     return text   });
 
+   return text        }
 
+var x=my()
+
+console.log(x)
 
 
  
