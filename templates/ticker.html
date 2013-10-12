@@ -35,8 +35,8 @@
       		    var c=a
   var button = document.createElement('button');
   button.id = c;
-  button.innerHTML = 'click me';
-  button.onclick = function(){
+  button.innerHTML = 'click me';};
+  function(){
     $(".dialog").dialog({
       autoOpen: false,
       show: {
@@ -53,7 +53,7 @@
       $('<p>abc 123 </p>').appendTo('.dialog');
       $( ".dialog" ).dialog( "open" );
     });
-  };
+  //};
   // where do we want to have the button to appear?
   // you can append it to another element just by doing something like
   
