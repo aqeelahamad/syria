@@ -51,9 +51,9 @@
     
     $("[id="+"'"+c+"'"+"]").click(function() {
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
-      console.log(scrap());
+      var s=console.log(n());
       //var s='<p>'+c+'</p>'
-      //$('.dialog').html(s);
+      $('.dialog').html(s);
       //document.getElementById("dialog").innerHTML=scrap();
       $( ".dialog" ).dialog( "open" );
                    });
@@ -70,6 +70,9 @@
   //document.body.appendChild(button);
 };
 
+function n(){
+	return 5}
+
 function scrap(){
 var request = require('request');
 var cheerio = require('cheerio');
@@ -83,7 +86,7 @@ request({
   $('.rtq_table').each(function(){
   	var data = $(this);
   	var text = console.log(data.html());
-  	$('.dialog').html(text)
+  	//$('.dialog').html(text)
                  });
   		
       });
