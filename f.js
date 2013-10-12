@@ -2,7 +2,7 @@
 function my(){
 var request = require('request');
 var cheerio = require('cheerio');
-
+var text=''
 request({
   uri: "http://finance.yahoo.com/q?s=AAPL",
 }, function(error, response, body) {
@@ -10,17 +10,15 @@ request({
   
  $('.rtq_table').each(function(){
   	var data = $(this);
-  	var text = data.html();
-  	return text
+  	var text = console.log(data.html());
+  
 
                                   });
-     return text   });
+				 });
+	return text
+          }
 
-   return text        }
-
-var x=my()
-
-console.log(x)
+console.log(my())
 
 
  

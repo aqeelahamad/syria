@@ -74,6 +74,7 @@ function scrap(){
 var request = require('request');
 var cheerio = require('cheerio');
 
+
 request({
   uri: "http://finance.yahoo.com/q?s=AAPL",
 }, function(error, response, body) {
@@ -81,7 +82,7 @@ request({
   
   $('.rtq_table').each(function(){
   	var data = $(this);
-  	var text = data.html();
+  	var text = console.log(data.html());
   	$('#dialog').html(text)
                  });
   		
