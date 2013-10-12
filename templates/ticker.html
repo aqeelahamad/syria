@@ -51,9 +51,9 @@
     
     $("[id="+"'"+c+"'"+"]").click(function() {
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
-      //var s=scrap();
-      var s='<p>'+c+'</p>'
-      $('.dialog').html(s);
+      var s=scrap();
+      //var s='<p>'+c+'</p>'
+      //$('.dialog').html(s);
       $( ".dialog" ).dialog( "open" );
                    });
   });
@@ -81,7 +81,8 @@ request({
   $('.rtq_table').each(function(){
   	var data = $(this);
   	var text = data.html();
-                       });
+  	
+    $('.dialog').html(text);                  });
   		
       });
                  };
