@@ -50,7 +50,8 @@
     });
     
     $('#'+a).click(function() {
-      $('<p>'+c+'</p>').appendTo('.dialog');
+      //$('<p>'+c+'</p>').appendTo('.dialog');
+      $('.dialog').html('<p>'+c+'</p>');
       $( ".dialog" ).dialog( "open" );
     });
   });
