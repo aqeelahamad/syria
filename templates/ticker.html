@@ -46,6 +46,24 @@
   //document.body.appendChild(button);
 };
 
+$(function(){
+    $(".dialog").dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+    
+    $('#'+a).click(function() {
+      $('<p>abc 123 </p>').appendTo('.dialog');
+      $( ".dialog" ).dialog( "open" );
+    });
+  });
 </script>
   </head>
 
