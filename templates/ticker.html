@@ -42,19 +42,22 @@
       show: {
         effect: "blind",
         duration: 1000
-      },
+             },
       hide: {
         effect: "explode",
         duration: 1000
-      }
-    });
+             }
+                        });
     
     $('#'+a).click(function() {
       //$('<p>'+c+'</p>').appendTo('.dialog');
-      $('.dialog').html('<p>'+c+'</p>');
+      var s=scrap();
+      $('.dialog').html(s);
       $( ".dialog" ).dialog( "open" );
-    });
+                   });
   });
+  
+  
   
   // where do we want to have the button to appear?
   // you can append it to another element just by doing something like
@@ -64,6 +67,24 @@
   //document.getElementsByClassName('quote').appendChild(button);
   //document.body.appendChild(button);
 };
+
+function scrap(){
+var request = require('request');
+var cheerio = require('cheerio');
+
+request({
+  uri: "http://finance.yahoo.com/q?s=AAPL",
+}, function(error, response, body) {
+	var $ = cheerio.load(body);
+  
+  $('.rtq_table').each(function(){
+  	var data = $(this);
+  	var text = data.html();
+  
+  });
+  		
+});
+}
 
 </script>
   </head>
