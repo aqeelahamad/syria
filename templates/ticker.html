@@ -35,8 +35,16 @@
       		    var c=a
   var button = document.createElement('button');
   button.id = c;
-  button.innerHTML = 'click me';};
+  button.innerHTML = 'click me';
   
+  // where do we want to have the button to appear?
+  // you can append it to another element just by doing something like
+  
+  $(button).appendTo('.quote')
+  
+  //document.getElementsByClassName('quote').appendChild(button);
+  //document.body.appendChild(button);
+};
 
 </script>
   </head>
