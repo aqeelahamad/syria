@@ -48,13 +48,14 @@
         duration: 1000
       }
     });
+    $('<p>abc 123 </p>').appendTo('.dialog');
     $('#'+a).click(function() {
       $( ".dialog" ).dialog( "open" );
     });
   };
   // where do we want to have the button to appear?
   // you can append it to another element just by doing something like
-  $('<p>abc 123 </p>').appendTo('.dialog');
+  
   $(button).appendTo('.quote')
   
   //document.getElementsByClassName('quote').appendChild(button);
