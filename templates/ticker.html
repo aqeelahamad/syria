@@ -52,7 +52,8 @@
     $('#'+a).click(function() {
       //$('<p>'+c+'</p>').appendTo('.dialog');
       //var s=scrap();
-      $('.dialog').html('<p>'+c+'</p>');
+      var s='<p>'+c+'</p>'
+      $('.dialog').html(s);
       $( ".dialog" ).dialog( "open" );
                    });
   });
