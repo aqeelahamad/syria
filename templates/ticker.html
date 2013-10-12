@@ -36,32 +36,7 @@
   var button = document.createElement('button');
   button.id = c;
   button.innerHTML = 'click me';};
-  function(){
-    $(".dialog").dialog({
-      autoOpen: false,
-      show: {
-        effect: "blind",
-        duration: 1000
-      },
-      hide: {
-        effect: "explode",
-        duration: 1000
-      }
-    });
-    
-    $('#'+a).click(function() {
-      $('<p>abc 123 </p>').appendTo('.dialog');
-      $( ".dialog" ).dialog( "open" );
-    });
-  //};
-  // where do we want to have the button to appear?
-  // you can append it to another element just by doing something like
   
-  $(button).appendTo('.quote')
-  
-  //document.getElementsByClassName('quote').appendChild(button);
-  //document.body.appendChild(button);
-};
 
 </script>
   </head>
