@@ -37,7 +37,7 @@
   button.id = c;
   button.innerHTML = 'click me';
   $(function(){
-    $("#dialog").dialog({
+    $(".dialog").dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -53,9 +53,9 @@
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
       var s=console.log(scrap());
       //var s='<p>'+c+'</p>'
-      $('#dialog').html(s);
+      $('.dialog').html(s);
       //document.getElementById("dialog").innerHTML=scrap();
-      $( "#dialog" ).dialog( "open" );
+      $( ".dialog" ).dialog( "open" );
                    });
   });
   
@@ -131,7 +131,7 @@ request({
       		</div>
 
     </div> <!-- /container -->
-    <div id="dialog" title="Basic dialog">
+    <div class="dialog" title="Basic dialog">
       			  		
       			  </div>
 
