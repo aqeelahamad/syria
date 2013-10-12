@@ -48,8 +48,9 @@
         duration: 1000
       }
     });
-    $('<p>abc 123 </p>').appendTo('.dialog');
+    
     $('#'+a).click(function() {
+      $('<p>abc 123 </p>').appendTo('.dialog');
       $( ".dialog" ).dialog( "open" );
     });
   };
