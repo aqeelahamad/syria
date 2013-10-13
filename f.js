@@ -25,7 +25,8 @@ function n(){
 function c(){
 var b=n()
 return b+2; }
-a=console.log(c())
+
+a=console.log(n())
  
 
 
