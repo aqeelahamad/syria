@@ -31,7 +31,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script>
-      		function my(a,n()){
+      		function my(a){
       		    var c= a;
   var button = document.createElement('button');
   button.id = c;
@@ -51,7 +51,7 @@
     
     $("[id="+"'"+c+"'"+"]").click(function() {
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
-      var s=console.log(n());
+      var s=console.log(k);
       //var s='<p>'+c+'</p>'
       $('.dialog').html(s);
       //document.getElementById("dialog").innerHTML=scrap();
@@ -70,7 +70,7 @@
   //document.body.appendChild(button);
 };
 
-function n(){
+var k=function n(){
 	return 5};
 
 function scrap(){
