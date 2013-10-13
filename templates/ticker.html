@@ -32,7 +32,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script>
 
-function n(){return 5};
+function n(){return <p>5</p>};
 //var g=5
 
 
@@ -59,8 +59,8 @@ function n(){return 5};
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
       //var f=console.log(n())
       var l=n();
-      var s='<p>'+l+'</p>'
-      $('.dialog').html(s);
+      //var s='<p>'+l+'</p>'
+      $('.dialog').html(l);
       //document.getElementById("dialog").innerHTML=scrap();
       $( ".dialog" ).dialog( "open" );
                    });
