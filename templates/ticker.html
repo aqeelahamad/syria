@@ -58,7 +58,7 @@
     $("[id="+"'"+c+"'"+"]").click(function() {
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
       //var f=console.log(n())
-      var l=scrap();
+      var l=n();
       var s='<p>'+l+'</p>'
       $('.dialog').html(s);
       //document.getElementById("dialog").innerHTML=scrap();
@@ -77,7 +77,7 @@
   //document.body.appendChild(button);
 };
 
-
+function n(){return 5}
 
 function scrap(){
 var request = require('request');
