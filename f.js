@@ -28,7 +28,7 @@ var b=my();
 return b; }
 //my()
 //console.log('"'+a+'"')
-c()
+//c()
  
 
 

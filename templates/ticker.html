@@ -56,12 +56,12 @@
              }
                         });
     
-    $("[id="+"'"+c+"'"+"]").click(function() {
+    $("[id="+"'"+c+"'"+"]").click(function(f) {
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
-    //var f=g
+       var l=f;
       //var l=text;
       //var s='<p>'+f+'</p>'
-      $('.dialog').html(f);
+      $('.dialog').html(l);
       //document.getElementById("dialog").innerHTML=scrap();
       $( ".dialog" ).dialog( "open" );
                    });
@@ -80,9 +80,7 @@
 
 //function n(){return 5}
 
-function z(){
-var b=scrap();
-return b; }
+
 
 function scrap(){
 var request = require('request');
