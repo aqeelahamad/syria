@@ -2,7 +2,7 @@
 function my(){
 var request = require('request');
 var cheerio = require('cheerio');
-var text=''
+var text='';
 request({
   uri: "http://finance.yahoo.com/q?s=AAPL",
 }, function(error, response, body) {
@@ -28,7 +28,7 @@ var b=my();
 return b; }
 //my()
 //console.log('"'+a+'"')
-//c()
+c()
  
 
 
