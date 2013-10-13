@@ -11,7 +11,7 @@ request({
  $('.rtq_table').each(function(){
   	var data = $(this);
   	//var text = console.log(data.html())
-  	var text=console.log(data.html().replace(/["]/g,'\\"'));
+  	var text=console.log('"'+data.html().replace(/["]/g,'\\"')+'"');
   
 
                                   });
