@@ -24,11 +24,11 @@ function n(){
 }
 //a=console.log(my())
 function c(){
-var b=my();
-return b; }
+//var b=my();
+return my(); }
 //my()
 //console.log('"'+a+'"')
-c()
+//c()
  
 
 
