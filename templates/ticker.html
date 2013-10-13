@@ -58,7 +58,7 @@
     
     $("[id="+"'"+c+"'"+"]").click(function() {
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
-      var f=console.log(scrap())
+      var f=scrap()
       //var l=text;
       var s='<p>'+f+'</p>'
       $('.dialog').html(s);
@@ -83,7 +83,7 @@ function n(){return 5}
 function scrap(){
 var request = require('request');
 var cheerio = require('cheerio');
-var t=''
+var text=''
 
 request({
   uri: "http://finance.yahoo.com/q?s=AAPL",
@@ -92,12 +92,12 @@ request({
   
   $('.rtq_table').each(function(){
   	var data = $(this);
-  	var t = console.log(data.html());
+  	var text = data.html();
   	//$('.dialog').html(text)
                  });
   		
       });
-     return t            };
+     return text            };
 
 </script>
   </head>
