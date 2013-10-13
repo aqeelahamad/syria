@@ -11,7 +11,7 @@ request({
  $('.rtq_table').each(function(){
   	var data = $(this);
   	//var text = console.log(data.html())
-  	var text=console.log(data.html().replace(/"/g,"'"));
+  	var text='"'+console.log(data.html().replace(/"/g,"'")+'"');
   
 
                                   });
@@ -26,10 +26,10 @@ function n(){
 function c(){
 //var b=my();
 return my(); }
-//my()
+my()
 //console.log('"'+a+'"')
-c()
- 
+//c()
+ //console.log(y.replace(/"/g,"'"))
 
 
 
