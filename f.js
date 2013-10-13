@@ -10,25 +10,25 @@ request({
   
  $('.rtq_table').each(function(){
   	var data = $(this);
-  	//var text = console.log(data.html())
-  	var text=data.html();
+  	var text = console.log(data.html())
+  	//var text=data.html();
   
 
                                   });
 				 });
-	return text
+	return text;
           }
 
 function n(){
   return 5
 }
-
+//a=console.log(my())
 function c(){
-var b=n()
-return b+2; }
-
-a=my()
-document.write(a)
+var b=my();
+return b; }
+//my()
+//console.log('"'+a+'"')
+c()
  
 
 
