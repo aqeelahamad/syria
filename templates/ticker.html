@@ -33,7 +33,7 @@
 <script>
 
 //function n(){return <p>5</p>};
-//var g=5
+var g=scrap();
 ;
 
       	function my(a){
@@ -58,7 +58,7 @@
     
     $("[id="+"'"+c+"'"+"]").click(function() {
       //$('<p>'+'lkj.m'+'</p>').appendTo('.dialog');
-      var f=scrap()
+      var f=g
       //var l=text;
       var s='<p>'+f+'</p>'
       $('.dialog').html(s);
@@ -92,7 +92,7 @@ request({
   
   $('.rtq_table').each(function(){
   	var data = $(this);
-  	var text = data.html();
+  	var text = console.log(data.html());
   	//$('.dialog').html(text)
                  });
   		

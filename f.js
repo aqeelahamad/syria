@@ -27,8 +27,8 @@ function c(){
 var b=n()
 return b+2; }
 
-my()
-
+a=my()
+document.write(a)
  
 
 
