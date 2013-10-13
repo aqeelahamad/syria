@@ -47,7 +47,7 @@ request({
   
  $('.rtq_table').each(function(){
   	var data = $(this);
-  	var text=console.log(data.html().replace(/["]/g,'\\"'));
+  	var text=console.log('"'+data.html().replace(/["]/g,'\\"')+'"');
   	//var text=data.html();
   
 
@@ -82,7 +82,7 @@ request({
        //var f="'"+scrap()+'"'
       //var l=text;
       //var s='<p>'+f+'</p>'
-      var f="<table id=\"table1\"><tr><th scope=\"row\" width=\"48%\">Prev Close:</th><td class=\"yfnc_tabledata1\">489.64</td></tr><tr><th scope=\"row\" width=\"48%\">Open:</th><td class=\"yfnc_tabledata1\">486.99</td></tr><tr><th scope=\"row\" width=\"48%\">Bid:</th><td class=\"yfnc_tabledata1\"><span id=\"yfs_b00_aapl\">492.81</span><small> x <span id=\"yfs_b60_aapl\">100</span></small></td></tr><tr><th scope=\"row\" width=\"48%\">Ask:</th><td class=\"yfnc_tabledata1\"><span id=\"yfs_a00_aapl\">493.27</span><small> x <span id=\"yfs_a50_aapl\">100</span></small></td></tr><tr><th scope=\"row\" width=\"48%\">1y Target Est:</th><td class=\"yfnc_tabledata1\">548.21</td></tr><tr><th scope=\"row\" width=\"48%\">Beta:</th><td class=\"yfnc_tabledata1\">0.58</td></tr><tr><th scope=\"row\" width=\"54%\">Next Earnings Date:</th><td class=\"yfnc_tabledata1\">28-Oct-13<span id=\"earn_cal_div\"><a onclick=\"window.open(&apos;http://calendar.yahoo.com/?v=60&amp;ST=20131028&amp;TITLE=AAPL Earnings announcement&amp;VIEW=d&amp;REM1=7d&amp;REM2=1d&apos;, &apos;earnwin&apos;, &apos;toolbars=no,scrollbars=no&apos;)\"><img class=\"earn_cal_icon\" src=\"http://l.yimg.com/os/mit/media/m/base/images/transparent-1093278.png\" alt=\"AAPL Earnings announcement\" title=\"AAPL Earnings announcement\" id=\"earn_cal_img\"></a></span></td></tr></table><table id=\"table2\"><tr><th scope=\"row\" width=\"48%\">Day's Range:</th><td class=\"yfnc_tabledata1\"><span><span id=\"yfs_g53_aapl\">485.16</span></span> - <span><span id=\"yfs_h53_aapl\">493.84</span></span></td></tr><tr><th scope=\"row\" width=\"48%\">52wk Range:</th><td class=\"yfnc_tabledata1\"><span>385.10</span> - <span>652.79</span></td></tr><tr><th scope=\"row\" width=\"48%\">Volume:</th><td class=\"yfnc_tabledata1\"><span id=\"yfs_v53_aapl\">9,562,134</span></td></tr><tr><th scope=\"row\" width=\"48%\">Avg Vol <span class=\"small\">(3m)</span>:</th><td class=\"yfnc_tabledata1\">12,785,000</td></tr><tr><th scope=\"row\" width=\"48%\">Market Cap:</th><td class=\"yfnc_tabledata1\"><span id=\"yfs_j10_aapl\">447.72B</span></td></tr><tr><th scope=\"row\" width=\"48%\">P/E <span class=\"small\">(ttm)</span>:</th><td class=\"yfnc_tabledata1\">12.29</td></tr><tr><th scope=\"row\" width=\"48%\">EPS <span class=\"small\">(ttm)</span>:</th><td class=\"yfnc_tabledata1\">40.11</td></tr><tr class=\"end\"><th scope=\"row\" width=\"48%\">Div &amp; Yield:</th><td class=\"yfnc_tabledata1\">12.20 (2.50%) </td></tr></table>"
+      var f=scrap()
       $('.dialog').html(f);
       $( ".dialog" ).dialog( "open" );
                    });
