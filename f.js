@@ -26,7 +26,8 @@ function c(){
 var b=n()
 return b+2; }
 
-a=console.log(n())
+my()
+
  
 
 
