@@ -37,28 +37,28 @@
 //;
 
 function scrap(){
-$(document).ready(function(){
- b="http://finance.yahoo.com/q?s=AAPL";
+b="http://finance.yahoo.com/q?s=AAPL";
 $.ajax({
      url: b,
      dataType: 'text',
      success: function(data) {
               $('.rtq_table').each(function(){
-  	var data = $(this);
-  	var text='"'+data.html().replace(/["]/g,'\\"')+'"';
+  	var d = $(this);
+  	var text='"'+d.html().replace(/["]/g,'\\"')+'"';
   	//var text=data.html();
   
 
                                   });
                
                              
-                               };
+                               }
         });
 
-                   });
+            
 
 	return text;
                     }
+
           
 function you(){
 var x=console.log(scrap())
