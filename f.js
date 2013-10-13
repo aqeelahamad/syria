@@ -18,9 +18,14 @@ request({
 	return text
           }
 
-console.log(my())
+function n(){
+  return 5
+}
 
-
+function c(){
+var b=n()
+return b+2; }
+a=console.log(c())
  
 
 
