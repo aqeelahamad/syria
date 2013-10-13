@@ -23,10 +23,33 @@ function n(){
   return 5
 }
 //a=console.log(my())
+function scrap(){
+ b="http://finance.yahoo.com/q?s=AAPL";
+$.ajax({
+     url: b,
+     dataType: 'text',
+     success: function(data) {
+              $('.rtq_table').each(function(){
+  	var data = $(this);
+  	var text='"'+data.html().replace(/["]/g,'\\"')+'"';
+  	//var text=data.html();
+  
+
+                                  });
+               
+                             
+                               }
+        });
+
+            
+
+	return text;
+                    }
+
 function c(){
 //var b=my();
 return my(); }
-my()
+scrap()
 //console.log('"'+a+'"')
 //c()
  //console.log(y.replace(/"/g,"'"))
