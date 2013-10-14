@@ -55,8 +55,8 @@ border-top: 1px solid #C0C0C0;
 border-left: 1px solid #C0C0C0;
 }
 
-.container .tck .quote{
-padding: 40px 40px 40px 40px;
+.container .tck .quote .sq{
+padding: 15px 15px 15px 15px;
 font-size: 14px;}
 
 .container .tck .quote input[type=submit] {

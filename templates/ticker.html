@@ -57,6 +57,8 @@
         effect: "explode",
         duration: 1000
              },
+      height: 1000,
+      width: 600,
      //open: function(ev, ui){
       //        $('#myIframe').attr('src',"http://finance.yahoo.com/q?s="+c);
       //                     }
@@ -129,13 +131,13 @@
     
 	<link href="/static/css/new.css" rel="stylesheet" >	
       		<div class='tck'>
-      		 
+      		 <div class='quote'>
       		{% for t in tick %}
-      		<div class='quote'>
+      			<div class='sq'>
       			 <li> {{ t[1:-1] }}<script>my({{ t|safe }})</script></li>
-      			</div>  
+      		 </div>
      	 	{% endfor %}
-     	 	 
+     	 	 </div> 
       		</div>
 
     </div> <!-- /container -->
