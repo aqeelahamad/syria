@@ -55,10 +55,10 @@
         effect: "explode",
         duration: 1000
              }
-             open: function(event, ui) {
-     $('#dialog').load('http://finance.yahoo.com/q?s=AAPL');
+      //       open: function(event, ui) {
+     //$('#dialog').load('http://finance.yahoo.com/q?s=AAPL');
        //alert('Load was performed.');
-                                      }
+       //                               }
                     
                         });
     
@@ -69,6 +69,7 @@
       //var s='<p>'+f+'</p>'
       //var f=;
       //$('.dialog').html(c);
+      $('.dialog').load('http://finance.yahoo.com/q?s=AAPL');
       $( ".dialog" ).dialog( "open" );
                    });
   });
