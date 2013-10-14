@@ -80,8 +80,8 @@ def stocks():
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(,stock_ls)
 	#tags=str(get_category_links('AAPL'))
-	tags='<p> asd </p>'
-	return render_template('ticker.html',tick=stock_ls,tags=tags)
+	#tags='<p> asd </p>'
+	return render_template('ticker.html',tick=stock_ls)
 	#return json.dumps(tags)
 	
 #@app.route('/stocks',methods=['POST'])
