@@ -36,25 +36,7 @@
 //var g=scrap();
 //;
 
-function scrap(){
-var request = require('request');
-var cheerio = require('cheerio');
-var text='';
-request({
-  uri: "http://finance.yahoo.com/q?s=AAPL",
-}, function(error, response, body) {
-	var $ = cheerio.load(body);
-  
- $('.rtq_table').each(function(){
-  	var data = $(this);
-  	var text='"'+data.html().replace(/["]/g,'\\"')+'"';
-  	//var text=data.html();
-  
 
-                                  });
-				 });
-	return text;
-          }
           
 function you(){
 var x=console.log(scrap())
@@ -80,6 +62,11 @@ return x;}
         effect: "explode",
         duration: 1000
              }
+             open: function(event, ui) {
+     $('.dialog').load('test.html', function() {
+       alert('Load was performed.');
+                     });
+                                      }
                         });
     
     $("[id="+"'"+c+"'"+"]").click(function() {
