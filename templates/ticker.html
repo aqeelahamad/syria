@@ -129,13 +129,13 @@
     
 	<link href="/static/css/new.css" rel="stylesheet" >	
       		<div class='tck'>
-      		 <div class='quote'>
+      		 
       		{% for t in tick %}
-      		
+      		<div class='quote'>
       			 <li> {{ t[1:-1] }}<script>my({{ t|safe }})</script></li>
-      			  
+      			</div>  
      	 	{% endfor %}
-     	 	 </div>
+     	 	 
       		</div>
 
     </div> <!-- /container -->
