@@ -9,6 +9,7 @@ from flask import render_template
 from flask import Flask
 from r_s import rank, check, sort
 import json
+from scrap import get_category_links
 
 tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 
@@ -79,8 +80,16 @@ def stocks():
 			stock_ls.extend([json.dumps(s[1:]) for s in stock ])
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(,stock_ls)
-	return render_template('ticker.html',tick=stock_ls)
+	tags=get_category_links('AAPL')
+	return render_template('ticker.html',tick=stock_ls,tags=json.dumps(tags))
 	#return stock_ls
+	
+#@app.route('/stocks',methods=['POST'])
+#def webs():
+#	w=request.form. 
+
+	
+
 	
 @app.route('/links')
 def link():
