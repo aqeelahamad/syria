@@ -134,8 +134,11 @@
       		 <div class='quote'>
       		{% for t in tick %}
       			<div class='sq'>
-      			 <li> {{ t[1:-1] }}<script>my({{ t|safe }})</script></li>
-      		 </div>
+      			  <tr>
+      			     <td><li> {{ t[1:-1] }}</li></td>
+      			     <td><script>my({{ t|safe }})</script></td>
+      			  </tr>
+      		    </div>
      	 	{% endfor %}
      	 	 </div> 
       		</div>
