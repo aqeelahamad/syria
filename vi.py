@@ -62,7 +62,6 @@ def vi():
 	return render_template('vi.html',updates=b)
 	#return b
 
-
 @app.route('/about')
 def about():
 	return render_template('about.html')
@@ -81,8 +80,8 @@ def stocks():
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(,stock_ls)
 	tags=get_category_links('AAPL')
-	return render_template('ticker.html',tick=stock_ls,tags=json.dumps(tags))
-	#return stock_ls
+	return render_template('ticker.html',tick=stock_ls,tags=tags)
+	#return json.dumps(tags)
 	
 #@app.route('/stocks',methods=['POST'])
 #def webs():
@@ -112,5 +111,5 @@ if __name__ == "__main__":
     app.run()
 #print a['statuses'][0]['user']['statuses_count']
 #vi()
-#print link()
+#print stocks()
     
