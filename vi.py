@@ -9,7 +9,7 @@ from flask import render_template
 from flask import Flask
 from r_s import rank, check, sort
 import json
-from scrap import get_category_links
+#from scrap import get_category_links
 
 tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 
