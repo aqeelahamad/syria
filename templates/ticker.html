@@ -37,10 +37,10 @@
 //;
 
 
-      	function my(a,z){
+      	function my(a){
       			//var text=console.log(scrap());
       			//var f=g;
-      			var x=z;
+      			//var x=z;
       		    var c= a;
   var button = document.createElement('button');
   button.id = c;
@@ -70,7 +70,7 @@
       //var s='<p>'+f+'</p>'
       //var f=;
       //a=$('.dialog').load('load.php?url=google.com');
-      $('.dialog').html(x);
+      $('.dialog').html();
       $( ".dialog" ).dialog( "open" );
                                   });
   });
@@ -127,7 +127,7 @@
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t[1:-1] }}<script>my({{ t|safe }},{{ tags }})</script></li>
+      			 <li> {{ t[1:-1] }}<script>my({{ t|safe }})</script></li>
       			  
      	 	{% endfor %}
      	 	 </div>
