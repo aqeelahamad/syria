@@ -69,7 +69,7 @@
       //var s='<p>'+f+'</p>'
       //var f=;
       //a=$('.dialog').load('load.php?url=google.com');
-      $('.dialog').html({{ tags }});
+      $('.dialog').html({{ tags|safe }});
       $( ".dialog" ).dialog( "open" );
                    });
   });
