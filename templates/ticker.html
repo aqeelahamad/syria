@@ -39,7 +39,8 @@
 function scrap(){
 $(document).ready(function()
 {
-$(".dialog").load("http://finance.yahoo.com/q?s=AAPL")
+$(".dialog").load("http://finance.yahoo.com/q?s=AAPL" function() {
+  alert( "Load was performed." );)
 })
                     }
 
