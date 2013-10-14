@@ -56,6 +56,9 @@
         effect: "explode",
         duration: 1000
              }
+     open: function(ev, ui){
+             $('#myIframe').attr('src','http://www.jQuery.com');
+          }
       //       open: function(event, ui) {
      //$('#dialog').load('http://finance.yahoo.com/q?s=AAPL');
        //alert('Load was performed.');
@@ -70,7 +73,7 @@
       //var s='<p>'+f+'</p>'
       //var f=;
       //a=$('.dialog').load('load.php?url=google.com');
-      $('.dialog').html();
+      $('.dialog').html(c);
       $( ".dialog" ).dialog( "open" );
                                   });
   });
