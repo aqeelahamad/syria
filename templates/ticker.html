@@ -56,9 +56,9 @@
         effect: "explode",
         duration: 1000
              },
-     open: function(ev, ui){
-              $('#myIframe').attr('src',"http://finance.yahoo.com/q?s="+c);
-                           }
+     //open: function(ev, ui){
+      //        $('#myIframe').attr('src',"http://finance.yahoo.com/q?s="+c);
+      //                     }
       //       open: function(event, ui) {
      //$('#dialog').load('http://finance.yahoo.com/q?s=AAPL');
        //alert('Load was performed.');
@@ -74,6 +74,7 @@
       //var f=;
       //a=$('.dialog').load('load.php?url=google.com');
       //$('.dialog').html(c);
+      $('#myIframe').attr('src',"http://finance.yahoo.com/q?s="+c)
       $( ".dialog" ).dialog( "open" );
                                   });
   });
