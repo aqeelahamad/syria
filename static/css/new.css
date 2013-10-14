@@ -68,6 +68,6 @@ font-size: 14px;}
   border-color:#0066CC;
 }
 
-.dialog #myIframe{
-height: 2400px;
-width : 1400px;}
+#myIframe{
+height: 600px;
+width :800px;}
