@@ -79,8 +79,9 @@ def stocks():
 			stock_ls.extend([json.dumps(s[1:]) for s in stock ])
 	stock_ls=list(set(stock_ls))
 	#stock_ls=map(,stock_ls)
-	tags=get_category_links('AAPL')
-	return render_template('ticker.html',tick=stock_ls,tags=str(tags))
+	#tags=str(get_category_links('AAPL'))
+	tags='<p> asd </p>'
+	return render_template('ticker.html',tick=stock_ls,tags=tags)
 	#return json.dumps(tags)
 	
 #@app.route('/stocks',methods=['POST'])
