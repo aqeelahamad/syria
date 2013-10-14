@@ -62,7 +62,7 @@ return x;}
         effect: "explode",
         duration: 1000
              }
-             open: function(event, ui) {
+             open: function() {
      $('.dialog').load('test.html', function() {
        alert('Load was performed.');
                      });
@@ -132,7 +132,7 @@ return x;}
       		 <div class='quote'>
       		{% for t in tick %}
       		
-      			 <li> {{ t[1:-1] }}<form method="POST"><script>my({{ t|safe }})</script></form> </li>
+      			 <li> {{ t[1:-1] }}<script>my({{ t|safe }})</script></li>
       			  
      	 	{% endfor %}
      	 	 </div>
