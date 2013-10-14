@@ -62,11 +62,12 @@ return x;}
         effect: "explode",
         duration: 1000
              }
-             open: function() {
+             open: {function() {
      $('.dialog').load('test.html', function() {
        alert('Load was performed.');
-                     });
-                                      }
+                    });
+                               }
+                    }
                         });
     
     $("[id="+"'"+c+"'"+"]").click(function() {
