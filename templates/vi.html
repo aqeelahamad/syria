@@ -60,7 +60,7 @@
 	<link href="/static/css/new.css" rel="stylesheet" >	
       		{% for m,n in updates %}
       		<div class='tweets'>
-      			 <li>{{ m }}</li>
+      			 <li>{{ m|urlize(40, true) }}</li>
       			 <div class='date'><ul>{{ n }}</ul> </div>
       		</div>
      	 	{% endfor %}
