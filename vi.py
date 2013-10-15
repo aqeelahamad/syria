@@ -3,7 +3,6 @@ import re
 import os
 import requests
 import jinja2
-import urllib
 from requests_oauthlib import OAuth1
 from flask import render_template
 from flask import Flask
