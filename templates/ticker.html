@@ -87,7 +87,7 @@
   // where do we want to have the button to appear?
   // you can append it to another element just by doing something like
   
-  $(button).appendTo('.row')
+  $(button).appendTo('.row'+c)
   
   //document.getElementsByClassName('quote').appendChild(button);
   //document.body.appendChild(button);
@@ -135,8 +135,8 @@
       		 <table>
       		{% for t in tick %}
  
-      			  <tr class='row'>
-      			     <td class='row'><li> {{ t[1:-1] }}<script>my({{ t|safe }})</script></li></td>
+      			  <tr>
+      			     <td class='row'+{{ t }}><li> {{ t[1:-1] }}<script>my({{ t|safe }})</script></li></td>
       			  </tr>
 
      	 	{% endfor %}
