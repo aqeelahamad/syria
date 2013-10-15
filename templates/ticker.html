@@ -87,7 +87,7 @@
   // where do we want to have the button to appear?
   // you can append it to another element just by doing something like
   
-  $(button).appendTo('.container .tck .quote .row')
+  $(button).appendTo('.row')
   
   //document.getElementsByClassName('quote').appendChild(button);
   //document.body.appendChild(button);
@@ -132,6 +132,7 @@
 	<link href="/static/css/new.css" rel="stylesheet" >	
       		<div class='tck'>
       		 <div class='quote'>
+      		 <table>
       		{% for t in tick %}
  
       			  <tr class='row'>
@@ -139,6 +140,7 @@
       			  </tr>
 
      	 	{% endfor %}
+     	 	</table>
      	 	 </div> 
       		</div>
 
