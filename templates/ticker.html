@@ -132,11 +132,12 @@
 	<link href="/static/css/new.css" rel="stylesheet" >	
       		<div class='tck'>
       		 <div class='quote'>
-      		 <table>
+      		 <table cellspacing="1" cellpadding="3">
       		{% for t in tick %}
  
       			  <tr>
       			     <td> <li> {{ t[1:-1] }} </li> </td>
+      			     <span style="color:blue"></span>
       			     <td class={{ t|safe }}><script>my({{ t|safe }})</script></li></td>
       			  </tr>
 
